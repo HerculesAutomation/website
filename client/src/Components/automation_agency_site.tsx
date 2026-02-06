@@ -1,5 +1,6 @@
 // App.jsx
 import React, { useState } from "react";
+import TallyEmbed from "./tally.tsx";
 import {
   Phone,
   Calendar,
@@ -255,12 +256,24 @@ export default function App() {
             Schedule a short call to see how a custom phone and booking system
             could fit into your gym’s current workflow.
           </p>
+          <section id="contact" className="cta">
+            <div className="cta-container">
+              <h2>
+                Interested in a More
+                <br />
+                Efficient Call System?
+              </h2>
+              <p>
+                Schedule a short call to see how a custom phone and booking system could
+                fit into your gym’s current workflow.
+              </p>
+
+              <TallyEmbed />
+            </div>
+          </section>
           <div className="cta-buttons">
-            <a href="mailto:hello@herculesautomation.com" className="btn-primary">
-              Submit Inquiry
-            </a>
-            <a href="tel:+1234567890" className="btn-secondary">
-              Or Call Us Now
+            <a href="tel:+19294357146" className="btn-secondary">
+              Or Call Us Now at +1 (929)-435-7146
             </a>
           </div>
         </div>
