@@ -246,16 +246,6 @@ export default function App() {
 
       {/* CTA Section */}
       <section id="contact" className="cta">
-        <div className="cta-container">
-          <h2>
-            Interested in a More
-            <br />
-            Efficient Call System?
-          </h2>
-          <p>
-            Schedule a short call to see how a custom phone and booking system
-            could fit into your gym’s current workflow.
-          </p>
           <section id="contact" className="cta">
             <div className="cta-container">
               <h2>
@@ -276,7 +266,6 @@ export default function App() {
               Or Call Us Now at +1 (929)-435-7146
             </a>
           </div>
-        </div>
       </section>
 
       {/* Footer */}
