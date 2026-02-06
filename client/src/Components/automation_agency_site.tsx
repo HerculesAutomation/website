@@ -66,12 +66,13 @@ export default function App() {
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-container">
-          <div className="logo-wrapper">
+          <a href="#hero" style={{ textDecoration: "none" }}><div className="logo-wrapper">
             <div className="logo-placeholder">
               <img src="/logo.png" alt="HerculesAutomation" />
             </div>
             <span className="company-name">HerculesAutomation</span>
           </div>
+          </a>
 
           <div className={`nav-links ${mobileMenuOpen ? "nav-links-open" : ""}`}>
             <a href="#features">Features</a>
@@ -90,7 +91,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero" style={{
+      <section  id="hero" className="hero" style={{
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
