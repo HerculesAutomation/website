@@ -1,6 +1,15 @@
 // App.jsx
-import React, { useState } from 'react';
-import { Phone, Calendar, MessageSquare, Bell, Users, ArrowRight, Menu, X, Check } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Phone,
+  Calendar,
+  Bell,
+  Users,
+  ArrowRight,
+  Menu,
+  X,
+  Check,
+} from "lucide-react";
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,45 +18,46 @@ export default function App() {
     {
       icon: Phone,
       title: "AI Front Desk",
-      problem: "You're losing leads to voicemail and paying staff to answer the same questions all day.",
-      solution: "A phone system that picks up every call, answers pricing and schedule questions instantly, and only transfers qualified leads to your team.",
-      forWho: "Perfect for gyms that get 20+ calls per week"
+      problem:
+        "Missed calls and repetitive questions can slow response times and pull staff away from higher-value work.",
+      solution:
+        "A phone system that answers common questions, shares basic information, and routes qualified callers to your team when needed.",
+      forWho: "Well-suited for gyms that receive frequent inbound calls",
     },
     {
       icon: Users,
       title: "Lead Qualification",
-      problem: "Your CRM is full of tire-kickers, wrong numbers, and spam. Finding real prospects takes hours.",
-      solution: "Only people who want to join get logged. Every entry includes their name, number, what they're looking for, and call notes—no junk.",
-      forWho: "For owners who need a clean pipeline, not a mess"
+      problem:
+        "Inbound calls often include incomplete inquiries, wrong numbers, or low-intent prospects.",
+      solution:
+        "The system captures structured details from interested callers, helping you prioritize follow-ups with clearer context.",
+      forWho: "For owners who want a more organized lead pipeline",
     },
     {
       icon: Calendar,
       title: "Assessment Booking",
-      problem: "Leads call interested, but booking an assessment takes 3 texts and 2 days—then they ghost.",
-      solution: "AI schedules the assessment while they're on the phone. Sends confirmation, reminder texts, and handles reschedules. Fast = more shows.",
-      forWho: "The fastest path from call to booked appointment"
-    },
-    {
-      icon: MessageSquare,
-      title: "SMS Follow-Ups",
-      problem: "Leads go cold because no one followed up. Members miss payments because you forgot to remind them.",
-      solution: "Sends polite, on-brand texts after every call, booking, or missed call. Optional payment reminders keep revenue flowing.",
-      forWho: "For gyms that want leads nurtured automatically"
+      problem:
+        "Delays between first contact and scheduling can reduce follow-through.",
+      solution:
+        "Callers can request an assessment during the conversation, with confirmations and reminders sent automatically.",
+      forWho: "Designed to shorten the gap between interest and booking",
     },
     {
       icon: Bell,
       title: "Owner Notifications",
-      problem: "You find out about hot leads too late, or miss that the front desk system crashed.",
-      solution: "Get a text or Slack ping when someone books, when a high-intent lead calls, or if something breaks. No checking dashboards.",
-      forWho: "Stay informed without being glued to your phone"
-    }
+      problem:
+        "Important activity can be easy to miss when everything lives inside dashboards.",
+      solution:
+        "Receive notifications for key events like new bookings or priority calls, without needing to constantly check systems.",
+      forWho: "Helpful for owners who want visibility without micromanaging",
+    },
   ];
 
   const stats = [
-    "30% more conversions",
-    "Zero missed calls",
-    "$5k-$15k monthly impact",
-    "Set up in 7 days"
+    "Improved Response Time",
+    "Fewer Missed Calls",
+    "More Booked Assessments",
+    "Less Administrative Work",
   ];
 
   return (
@@ -61,16 +71,17 @@ export default function App() {
             </div>
             <span className="company-name">HerculesAutomation</span>
           </div>
-          
-          <div className={`nav-links ${mobileMenuOpen ? 'nav-links-open' : ''}`}>
+
+          <div className={`nav-links ${mobileMenuOpen ? "nav-links-open" : ""}`}>
             <a href="#features">Features</a>
             <a href="#comparison">Why Custom</a>
             <a href="#contact">Contact</a>
           </div>
 
-          <button 
+          <button
             className="mobile-menu-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -78,17 +89,23 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" style={{
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}>
         <h1>
-          Turn Every Call<br/>
-          Into a <span className="gold-text">Booked</span><br/>
-          Assessment
+          Turn More Calls
+          <br />
+          Into <span className="gold-text">Booked</span>
+          <br />
+          Assessments
         </h1>
-        <p className="subtitle">
-          Custom phone and follow-up systems for gyms that book 15-40 new members per month—without adding headcount.
-        </p>
         <p className="description">
-          Stop losing leads to voicemail. Stop playing phone tag. Start booking while your competitors sleep.
+          A custom AI phone and scheduling system designed to help gyms respond
+          faster, qualify leads clearly, and book assessments with less manual
+          work.
         </p>
         <a href="#contact" className="btn-primary">
           See How It Works <ArrowRight size={20} />
@@ -99,16 +116,26 @@ export default function App() {
       <section className="stats-bar">
         <div className="stats-container">
           {stats.map((stat, idx) => (
-            <div key={idx} className="stat">{stat}</div>
+            <div key={idx} className="stat">
+              {stat}
+            </div>
           ))}
         </div>
       </section>
 
       {/* Features Section */}
       <section id="features" className="features">
-        <h2>What You Get</h2>
-        <p className="section-subtitle">Five systems that work together</p>
-        
+        <div  style={{
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}>
+          <h2>What You Get</h2>
+          <p className="section-subtitle">
+            Four systems designed to work together
+          </p>
+        </div>
         <div className="feature-list">
           {features.map((feature, idx) => {
             const Icon = feature.icon;
@@ -132,37 +159,49 @@ export default function App() {
       {/* Comparison Section */}
       <section id="comparison" className="comparison">
         <div className="comparison-container">
-          <h2>Why Not Just Use<br/>Built-In AI Tools?</h2>
-          <p className="section-subtitle">
-            Your scheduling software might have "AI features." Here's why they don't book leads like a custom system does.
-          </p>
+          <div style={{
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}>
+            <h2>
+              Why a Custom System
+              <br />
+              Instead of Built-In Tools?
+            </h2>
+            <p className="section-subtitle">
+              Many platforms offer basic automation. A custom system is designed
+              around how your gym actually handles calls, bookings, and follow-ups.
+            </p>
+          </div>
 
           <div className="comparison-grid">
             <div className="comparison-card built-in">
-              <h3>BUILT-IN AI</h3>
+              <h3>BUILT-IN TOOLS</h3>
               <ul>
                 <li>
                   <span className="x-mark">×</span>
-                  <span>Generic responses</span>
+                  <span>Standardized responses</span>
                 </li>
                 <li>
                   <span className="x-mark">×</span>
-                  <span>Logs everything (including junk)</span>
+                  <span>Limited lead filtering</span>
                 </li>
                 <li>
                   <span className="x-mark">×</span>
-                  <span>Redirects to web forms</span>
+                  <span>Often redirects to forms</span>
                 </li>
                 <li>
                   <span className="x-mark">×</span>
-                  <span>No follow-ups</span>
+                  <span>Minimal follow-up logic</span>
                 </li>
                 <li>
                   <span className="x-mark">×</span>
-                  <span>Locked to one platform</span>
+                  <span>Tied to one platform</span>
                 </li>
               </ul>
-              <p className="impact">Impact: Saves time</p>
+              <p className="impact">Best for: Basic automation</p>
             </div>
 
             <div className="comparison-card custom">
@@ -170,32 +209,35 @@ export default function App() {
               <ul>
                 <li>
                   <Check size={20} className="check-mark" />
-                  <span>Answers your exact pricing & packages</span>
+                  <span>Configured to your pricing and services</span>
                 </li>
                 <li>
                   <Check size={20} className="check-mark" />
-                  <span>Only logs qualified leads</span>
+                  <span>Captures structured lead information</span>
                 </li>
                 <li>
                   <Check size={20} className="check-mark" />
-                  <span>Books during the call</span>
+                  <span>Supports booking during the call</span>
                 </li>
                 <li>
                   <Check size={20} className="check-mark" />
-                  <span>Automatic nurture in your voice</span>
+                  <span>Automated follow-ups in your brand voice</span>
                 </li>
                 <li>
                   <Check size={20} className="check-mark" />
-                  <span>Works with any tools you use</span>
+                  <span>Integrates with existing tools</span>
                 </li>
               </ul>
-              <p className="impact">Impact: +$5k-$15k/month</p>
+              <p className="impact">Best for: Booking-focused workflows</p>
             </div>
           </div>
 
           <div className="quote-block">
             <p>
-              Built-in tools save companies support costs. Custom systems book your appointments and close your leads. One answers calls. The other converts them. That's why gyms see 20-30% more bookings in month one.
+              Built-in tools are designed to reduce manual work. Custom systems
+              are designed around your specific booking process. For many gyms,
+              this results in faster responses, clearer lead handling, and more
+              consistent booking over time.
             </p>
           </div>
         </div>
@@ -204,9 +246,14 @@ export default function App() {
       {/* CTA Section */}
       <section id="contact" className="cta">
         <div className="cta-container">
-          <h2>Ready to Stop<br/>Losing Leads?</h2>
+          <h2>
+            Interested in a More
+            <br />
+            Efficient Call System?
+          </h2>
           <p>
-            Book a 20-minute call. We'll walk you through exactly how this works for a gym your size.
+            Schedule a short call to see how a custom phone and booking system
+            could fit into your gym’s current workflow.
           </p>
           <div className="cta-buttons">
             <a href="mailto:hello@herculesautomation.com" className="btn-primary">
@@ -228,8 +275,10 @@ export default function App() {
             </div>
             <span className="company-name">HerculesAutomation</span>
           </div>
-          <p>Custom Phone & Follow-Up Systems for Gyms</p>
-          <p className="copyright">© 2026 HerculesAutomation. All rights reserved.</p>
+          <p>Custom Phone and Scheduling Systems Built for Gyms</p>
+          <p className="copyright">
+            © 2026 HerculesAutomation. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
