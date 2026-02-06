@@ -56,7 +56,7 @@ export default function App() {
 
   const stats = [
     "Improved Response Time",
-    "Fewer Missed Calls",
+    "No Missed Calls",
     "More Booked Assessments",
     "Less Administrative Work",
   ];
@@ -254,8 +254,7 @@ export default function App() {
                 Efficient Call System?
               </h2>
               <p>
-                Schedule a short call to see how a custom phone and booking system could
-                fit into your gym’s current workflow.
+                Share a few details about your gym, and we’ll follow up to discuss how a custom phone and booking system could support your workflow.
               </p>
 
               <TallyEmbed />
