@@ -70,9 +70,9 @@ export default function App() {
             <div className="logo-placeholder">
               <img src="/logo.png" alt="HerculesAutomation" />
             </div>
-            <span className="company-name">HerculesAutomation</span>
+            <span className="company-name" style={{ display: "flex",}}><div>Hercules</div><div style={{color: "#C9A24D"}}>Automation</div></span>
           </div>
-          </a>
+          </a>            
 
           <div className={`nav-links ${mobileMenuOpen ? "nav-links-open" : ""}`}>
             <a href="#features">Features</a>
@@ -263,26 +263,56 @@ export default function App() {
           </section>
           <div className="cta-buttons">
             <a href="tel:+19294357146" className="btn-secondary">
-              Or Call Us Now at +1 (929)-435-7146
+              Or Call Us Now at (929) 435-7146
             </a>
           </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-logo">
-            <div className="logo-placeholder">
-              <img src="/logo.png" alt="HerculesAutomation" />
-            </div>
-            <span className="company-name">HerculesAutomation</span>
-          </div>
-          <p>Custom Phone and Scheduling Systems Built for Gyms</p>
-          <p className="copyright">
-            © 2026 HerculesAutomation. All rights reserved.
-          </p>
-        </div>
-      </footer>
+  <div className="footer-container">
+    <div className="footer-logo">
+      <div className="logo-placeholder">
+        <img src="/logo.png" alt="HerculesAutomation" />
+      </div>
+
+      <span
+        className="company-name"
+        style={{ display: "flex", gap: "4px" }}
+      >
+        <div>Hercules</div>
+        <div style={{ color: "#C9A24D" }}>Automation</div>
+      </span>
+    </div>
+
+    <p>Custom Phone and Scheduling Systems Built for Gyms</p>
+
+    {/* Contact info */}
+    <div
+      className="footer-contact"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "6px",
+        marginTop: "12px",
+        fontSize: "14px",
+      }}
+    >
+      <p>
+        herculesautomated@gmail.com
+      </p>
+
+      <p>
+        (929) 435-7146
+      </p>
+    </div>
+
+    <p className="copyright" style={{ marginTop: "16px" }}>
+      © {new Date().getFullYear()} Hercules Automation LLC. All rights reserved.
+    </p>
+  </div>
+</footer>
+
     </div>
   );
 }
