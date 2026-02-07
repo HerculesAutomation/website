@@ -65,6 +65,7 @@ body {
 }
 
 .logo-placeholder {
+  
   width: 65px;
   height: 65px;
   background: var(--gray-100);
@@ -73,6 +74,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background: transparent;
 }
 
 .logo-placeholder img {

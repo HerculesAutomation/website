@@ -67,8 +67,8 @@ export default function App() {
       <nav className="nav">
         <div className="nav-container">
           <a href="#hero" style={{ textDecoration: "none" }}><div className="logo-wrapper">
-            <div className="logo-placeholder">
-              <img src="/logo.png" alt="HerculesAutomation" />
+            <div  className="logo-placeholder">
+              <img draggable="false" src="/logo.png" alt="HerculesAutomation" />
             </div>
             <span className="company-name" style={{ display: "flex",}}><div>Hercules</div><div style={{color: "#C9A24D"}}>Automation</div></span>
           </div>
@@ -273,12 +273,12 @@ export default function App() {
   <div className="footer-container">
     <div className="footer-logo">
       <div className="logo-placeholder">
-        <img src="/logo.png" alt="HerculesAutomation" />
+        <img draggable="false" src="/logo.png" alt="HerculesAutomation" />
       </div>
 
       <span
         className="company-name"
-        style={{ display: "flex", gap: "4px" }}
+        style={{ display: "flex"}}
       >
         <div>Hercules</div>
         <div style={{ color: "#C9A24D" }}>Automation</div>
