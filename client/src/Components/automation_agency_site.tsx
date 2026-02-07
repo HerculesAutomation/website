@@ -135,7 +135,7 @@ export default function App() {
         }}>
           <h2>What You Get</h2>
           <p className="section-subtitle">
-            Four systems designed to work together
+            Systems designed to work together
           </p>
         </div>
         <div className="feature-list">
